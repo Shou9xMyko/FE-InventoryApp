@@ -2,7 +2,6 @@ import axios from "axios";
 import { isLoading } from "./LoaderAction";
 import Swal from "sweetalert2";
 import { GetFileNameFromUrlImg } from "../../utils/functionUtils";
-import Cookies from "js-cookie";
 
 export const ADD_DATA = "ADD_DATA_PRODUCT";
 export const FETCH_DATA_PRODUCT = "ADD_DATA_PRODUCT";
@@ -78,8 +77,6 @@ export const addDataProduct = (data, navigate, token) => {
           timer: 2000,
         });
 
-        Cookies.remove("login-data");
-
         navigate("/login");
       } else if (error.response.data.status == "failed_add") {
         await Swal.fire({
@@ -134,8 +131,6 @@ export const deleteProduct = (
           text: "silahkan login kembali",
           timer: 2000,
         });
-
-        Cookies.remove("login-data");
         dispatch(isLoading(false));
 
         navigate("/login");
@@ -202,8 +197,6 @@ export const updateProduct = (data, navigate, token) => {
           text: "silahkan login kembali",
           timer: 2000,
         });
-
-        Cookies.remove("login-data");
 
         navigate("/login");
       } else if (error.response.data.status == "failed_update") {

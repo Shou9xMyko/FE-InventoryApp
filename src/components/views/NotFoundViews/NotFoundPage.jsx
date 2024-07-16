@@ -1,10 +1,10 @@
 import NotFoundImages from "./../../../../public/pagenotfound.png";
 import { useNavigate } from "react-router-dom";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import Cookies from "js-cookie";
+import useAuthHeader from "react-auth-kit/hooks/useAuthHeader";
 const NotFoundPage = () => {
   const navigate = useNavigate();
-  const loginData = Cookies.get("_auth");
+  const token = useAuthHeader();
 
   return (
     <div className="mx-5 h-[90vh] lg:h-[90vh] flex items-center justify-center">
@@ -21,7 +21,7 @@ const NotFoundPage = () => {
           Halaman tidak ditemukan !
         </h1>
 
-        {loginData && (
+        {token && (
           <div className="flex justify-center mt-5 mb-10 md:mt-10 mx-5 md:mb-0 lg:mt-5 lg:mb-0">
             <button
               onClick={() => navigate("/main-page")}
