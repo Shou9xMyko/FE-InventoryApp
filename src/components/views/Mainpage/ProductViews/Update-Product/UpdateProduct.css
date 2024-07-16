@@ -1,0 +1,18 @@
+.file_input_update {
+  background: white;
+  border: 2px solid rgb(192 38 211) !important;
+  border-radius: 6px !important;
+  width: 100%;
+}
+.file_input_update:hover {
+  background: rgb(244 244 245);
+}
+
+.file_input_update::-webkit-file-upload-button {
+  background: rgb(192 38 211) !important;
+  color: white;
+}
+
+.file_input_update::-webkit-file-upload-button:hover {
+  background: rgb(162 28 175) !important;
+}
