@@ -1,4 +1,3 @@
-"use client";
 import { IoEye } from "react-icons/io5";
 import { IoMdEyeOff } from "react-icons/io";
 import { useState } from "react";
@@ -25,7 +24,7 @@ const Login = () => {
 
   return (
     <div className="flex justify-center py-20 bg-[red]s">
-      <div className="bg-[tomatos] p-10 border-2 rounded-md w-11/12 h-4/5 sm:w-4/5 sm:h-2/5 lg:w-2/5">
+      <div className="p-10 border-2 rounded-md w-11/12 h-4/5 sm:w-4/5 sm:h-2/5 lg:w-2/5">
         <h1 className="font-bold text-4xl mb-14 text-gray-800 text-center">
           LOGIN
         </h1>
@@ -33,7 +32,7 @@ const Login = () => {
           <div className="flex flex-col gap-1">
             <label
               htmlFor="email"
-              className="bg-[tomato]s text-lg font-medium text-gray-800"
+              className="text-lg font-medium text-gray-800"
             >
               Email
             </label>
@@ -48,7 +47,7 @@ const Login = () => {
           <div className="flex flex-col gap-1 relative">
             <label
               htmlFor="password"
-              className="bg-[tomato]s text-lg font-medium text-gray-800"
+              className=" text-lg font-medium text-gray-800"
             >
               Password
             </label>
